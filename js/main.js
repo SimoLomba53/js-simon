@@ -21,8 +21,12 @@ function passTime() {
     const minutes = Math.floor((missTime % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((missTime % (1000 * 60)) / (1000));
     //NE RIPORTIAMO I VALORI
-    hoursEl.innerHTML = hours;
-    minutesEl.innerHTML = minutes;
-    secondsEl.innerHTML = seconds;
+    hoursEl.innerHTML = (hours < 10) ? "0" + hours : hours;
+    minutesEl.innerHTML = (minutes < 10) ? "0" + minutes : minutes;
+    secondsEl.innerHTML = (seconds < 10) ? "0" + seconds : seconds;
 
+    //SE L'ORA ATTUALE E' LA STESSA DI QUELLA IMPOSTATA...
+    if (countDownDate == nowdate) {
+        alert("E' ora della correzione!");
+    }
 }

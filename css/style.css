@@ -1,0 +1,19 @@
+body {
+    background-color: #E7E5E2;
+}
+
+.conteiner {
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.timer {
+    font-size: 60px;
+}
+
+h1 {
+    text-align: center;
+}
